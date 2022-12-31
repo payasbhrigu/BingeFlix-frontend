@@ -1,0 +1,90 @@
+// *{
+//     border: 1px solid black;
+// }
+
+.container{
+    display: flex;
+    padding: 0px
+}
+
+.navbar{
+    color: white;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top,transparent 0%,rgb(0,0,0,0.3) 50% ) 3s linear;
+    transition: background 0.5s linear;
+
+    &.scrolled{
+        background : rgba(18, 160, 199, 0.906);
+    }
+
+    .right{
+        margin-left: auto;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    
+        .icon{
+            margin: 0px 15px;
+            cursor: pointer;
+        }
+    
+        .profile{
+            display: flex;
+            align-items: center;
+            .options{
+                top: 43px;
+                left: 170px;
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                color: black;
+                background-color: rgb(18, 160, 199);
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                transition: visibility 1s linear,opacity 300ms;
+                span{
+                    cursor: pointer;
+                    padding: 10px;
+                }
+            }
+            
+        }
+
+        .profile:hover{ 
+            .options{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    
+    }
+
+}
+
+.usericon{
+    height: 50px;
+    width: 50px;
+}
+
+.logo{
+    margin-left: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.tabs{
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
