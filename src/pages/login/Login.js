@@ -23,11 +23,11 @@ export default function Login() {
         </div>
       </div>
       <div className="container">
-        <form>
+        <form action="logintest.html" method="get">
           <h1>Sign In</h1>
           <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
           <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-          <button className="loginButton" onClick={handleLogin}>Sign In</button>
+          <input type="submit" value="submit"/>
           <span>
             New to BingeFlix? <b>Sign up now.</b>
           </span>
